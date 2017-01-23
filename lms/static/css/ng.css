@@ -150,9 +150,9 @@ background:none!important; /*this is for the color just under slogan NO AVAILABL
 /*the following are for the blue bar under each course in homepage and the bg color*/
 .courses-container .courses .course{
 border-bottom:none!important;
-background:none!important;
-
+background:none;
 }
+
 /*the following are for the small dropdown button on top right */
 header.global .user .dropdown{
 background:#efefef;
@@ -191,8 +191,28 @@ width:80%!important;
 margin-left:auto!important;
 margin-right:auto!important;
 float:none;
-
 }
+/*fix color of the borders in dashboard*/
+.dashboard .my-courses .listing-courses .course-item, 
+.dashboard .my-courses .wrapper-header-courses{
+border-bottom-color:#cfcfcf!important;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container{
+border:1px solid #cfcfcf!important;
+}
+h3 a, h3 a:visited{
+color:grey;
+}
+h3 a:hover, a:focus{
+color:#0079bc;
+}
+.course-actions a:hover{
+color:white;
+}
+.dashboard .my-courses .course .details .course-actions .action:hover, .dashboard .my-courses .course .details .course-actions .action:focus{
+color:black!important;
+}
+
 /* Hide info for the grade and certificate in dashboard */
 .course-item .course-container .course .wrapper-messages-primary{
 /*display:none!important;*/
