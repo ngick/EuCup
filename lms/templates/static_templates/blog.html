@@ -1,0 +1,232 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">Έγραψαν και είπαν για εμάς.</%block>
+<section class="container about">
+
+<table class="ngabout">
+<tr><td class="ngabout"><%include file="menu-news.html"/></td>
+<td class="ngabout2">
+
+<style>
+.ngthumb{
+text-align:center;
+padding:2px;
+border-bottom:1px dotted;
+width:50px;
+padding-top:15px;
+padding-bottom:10px;
+}
+.ngimgthumb{
+max-width:100px;
+
+}
+.ngdesc{
+padding:2px;
+border-bottom:1px dotted;
+padding-top:10px;
+padding-bottom:10px;
+line-height:1.4em;
+}
+</style>
+
+<h1>Έγραψαν και είπαν για εμάς</h1>
+
+<table>
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/vima.jpg" class="ngimgthumb"/></td>
+<td class="ngdesc"><a href="http://www.tovima.gr/society/article/?aid=841138" target="_blank">Ξεκινά το φθινοπωρινό πρόγραμμα του «Mathesis»</a><br/>
+	<b>Το Βήμα 02/11/2016 από την Μάρνυ Παπαματθαίου</b><br/><br/>
+To πείραμα της ανοικτής διαδικτυακής γνώσης και των MOOCs (Massive Open Online Courses) ξεκίνησε στις ΗΠΑ το 2011, αλλά στην Ελλάδα έχει δύο χρόνια ζωής, και αυτά με έδρα την Κρήτη.  
+<a href="http://www.tovima.gr/society/article/?aid=841138" target="_blank">περισσότερα</a>
+</td></tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/874872/article/epikairothta/ellada/17000-eggrafes-sto-mathesis" target="_blank">17.000 εγγραφές στο Mathesis</a><br/>
+<b>Η Καθημερινή 15/09/2016 από τον Απόστολο Λακασά</b><br/><br/>
+Τον Νοέμβριο του 2012 ένα δημοσίευμα των Times της Νέας Υόρκης επρόκειτο να αφήσει ίχνη. Τίτλος του: The year of the MOOC.
+<a href="http://www.kathimerini.gr/874872/article/epikairothta/ellada/17000-eggrafes-sto-mathesis" target="_blank">περισσότερα</a>
+</td>
+</tr>
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/874870/article/epikairothta/ellada/prwtia-gia-ellhnes-foithtes-sto-xarvarnt" target="_blank">Πρωτιά για Ελληνες φοιτητές στο Χάρβαρντ</a><br/>
+<b>Η Καθημερινή 15/09/2016 από τον Απόστολο Λακασά</b><br/><br/>
+Το "κίνημα των MOOCs" –των Massive Open Online Courses, Μαζικών Ανοικτών Διαδικτυακών Μαθημάτων, όπως είναι η ελληνική μετάφραση– είναι η πιο ανατρεπτική μεταρρύθμιση στην ιστορία του πανεπιστημιακού θεσμού, σύμφωνα με κάποιους.
+<a href="http://www.kathimerini.gr/874870/article/epikairothta/ellada/prwtia-gia-ellhnes-foithtes-sto-xarvarnt" target="_blank">περισσότερα</a>
+</td>
+</tr>
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/866529/article/epikairothta/ellada/einai-terastia-eykairia-gia-th-diadosh-ths-gnwshs" target="_blank">Είναι τεράστια ευκαιρία για τη διάδοση της γνώσης</a><br/>
+<b>Η Καθημερινή 07/07/2016 από τον Απόστολο Λακασά</b><br/><br/>
+Στην αρχή πίστευα ότι πρέπει να είναι ζωντανή η διαδικασία της διδασκαλίας και να βλέπει ο ένας τα μάτια του άλλου. Είχα λάθος...
+<a href="http://www.kathimerini.gr/866529/article/epikairothta/ellada/einai-terastia-eykairia-gia-th-diadosh-ths-gnwshs" target="_blank">περισσότερα</a>
+</td>
+</tr>
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/866528/article/epikairothta/ellada/ena-peirama-allazei-ta-dedomena-ths-ma8hshs" target="_blank">Ένα πείραμα αλλάζει τα δεδομένα της μάθησης</a><br/>
+<b>Η Καθημερινή 07/07/2016 από τον Απόστολο Λακασά</b><br/><br/>
+Ένα εντυπωσιακό πείραμα βρίσκεται σε εξέλιξη στο Πανεπιστήμιο Κρήτης. Πείραμα το οποίο αναμένεται να συμβάλει στην αλλαγή της παραδοσιακής μορφής διδασκαλίας...
+<a href="http://www.kathimerini.gr/866528/article/epikairothta/ellada/ena-peirama-allazei-ta-dedomena-ths-ma8hshs" target="_blank">περισσότερα</a>
+</td>
+</tr>
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/853423/article/epikairothta/ellada/kvantomhxanikh-kai-1821-ta-dyo-nea-ma8hmata-sth-skhnh-toy-mathesis" target="_blank">Κβαντομηχανική και 1821 τα δύο νέα μαθήματα στη «σκηνή» του Mathesis</a><br/>
+<b>Η Καθημερινή 18/03/2016 από τον Απόστολο Λακασά</b><br/><br/>
+Δύο νέα διαδικτυακά μαθήματα του Mathesis ξεκινούν αυτές τις ημέρες.
+<a href="http://www.kathimerini.gr/853423/article/epikairothta/ellada/kvantomhxanikh-kai-1821-ta-dyo-nea-ma8hmata-sth-skhnh-toy-mathesis" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/Kathimerini.png" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/849325/article/epikairothta/ellada/st-traxanas-yyhlh-poiothta-dwrean" target="_blank">Στ. Τραχανάς: «Υψηλή ποιότητα δωρεάν»</a><br/>
+<b>Η Καθημερινή 13/02/2016 από τον Απόστολο Λακασά</b><br/><br/>
+«Τα μαζικά μαθήματα στο αμφιθέατρο μου φαίνονται Μεσαίωνας», λέει στην «Κ» ο Στέφανος Τραχανάς και ξαφνιάζει μόνο όσους δεν τον γνωρίζουν.
+<a href="http://www.kathimerini.gr/849325/article/epikairothta/ellada/st-traxanas-yyhlh-poiothta-dwrean" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/sintakton.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.efsyn.gr/arthro/i-pagkosmiopoiisi-epinoithike-kata-tin-ellinistiki-epohi" target="_blank">Η παγκοσμιοποίηση; Επινοήθηκε κατά την ελληνιστική εποχή!</a><br/>
+<b>Εφημερίδα των Συντακτών 23/01/2016 από τον Σπύρο Μανουσέλη</b><br/><br/>
+Τη Δευτέρα 25/1/2016 ο διεθνούς φήμης ιστορικός της αρχαιότητας Αγγ. Χανιώτης εγκαινιάζει τον Β΄ κύκλο διαδικτυακών μαθημάτων Ιστορίας του προγράμματος «Mathesis»
+<a href="http://www.efsyn.gr/arthro/i-pagkosmiopoiisi-epinoithike-kata-tin-ellinistiki-epohi" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/vima.jpg" class="ngimgthumb"/></td>
+<td class="ngdesc"><a href="http://www.tovima.gr/society/article/?aid=767897" target="_blank">Νέος κύκλος ανοιχτών διαδικτυακών μαθημάτων από το «Mathesis»</a><br/>
+	<b>Το Βήμα 13/01/2016 από την Μάρνυ Παπαματθαίου</b><br/><br/>
+ Από Μέγα Αλέξανδρο, σε Κοσμολογία και Εφαρμοσμένη Κβαντομηχανική 
+<a href="http://www.tovima.gr/society/article/?aid=767897" target="_blank">περισσότερα</a>
+</td></tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/ΑΝΤ1.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.antenna.gr/webtv/watch?cid=_ur3_d_k_i1l_s_y_m%3D" target="_blank">Ψηφιακή Πλατφόρμα "Mathesis"</a><br/>
+<b>Ant1 7/12/2015 με τη Μαρί Κυριακού</b><br/><br/>
+Η εκπομπή "Με Αγάπη" παρουσιάζει το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων, Mathesis. Πρόκειται για ένα κέντρο που απευθύνεται σε φοιτητές, άτομα του επιστημονικού κλάδου, αλλά και σε εκείνους που επιθυμούν να εμπλουτίσουν τις γνώσεις τους, διευρύνοντας τους πνευματικούς τους ορίζοντες.
+<a href="http://www.antenna.gr/webtv/watch?cid=_ur3_d_k_i1l_s_y_m%3D" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/sintakton.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.efsyn.gr/arthro/i-istoriki-paideia-os-antidoto-stin-krisi" target="_blank">Η ιστορική παιδεία ως αντίδοτο στην κρίση</a><br/>
+<b>Εφημερίδα των Συντακτών 30/11/2015 από τον Σπύρο Μανουσέλη</b><br/><br/>
+Tα δύο τελευταία χρόνια μια ομάδα τολμηρών Ελλήνων πανεπιστημιακών δασκάλων εργάστηκε σκληρά για να δημιουργήσει τα πρώτα ελληνικά «Ανοικτά Διαδικτυακά Μαθήματα». Αποτέλεσμα αυτής της προσπάθειας είναι το «Mathesis» 
+<a href="http://www.efsyn.gr/arthro/i-istoriki-paideia-os-antidoto-stin-krisi" target="_blank">περισσότερα</a>
+</td>
+</tr>
+<!--
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/kathimerini.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.kathimerini.gr/840398/opinion/epikairothta/politikh/ryakia-sto-telma" target="_blank">Ρυάκια στο τέλμα</a><br/>
+<b>Καθημερινή της Κυριακής 29/11/2015 από τον Αρίστο Δοξιάδη</b><br/><br/>
+Στα εξαιρετικά διαδικτυακά μαθήματα που ανέπτυξαν τα κορυφαία πανεπιστήμια του κόσμου προστέθηκε πρόσφατα το πρόγραμμα mathesis των Πανεπιστημιακών Εκδόσεων Κρήτης, και είναι βέβαιο ότι θα υπάρξουν κι άλλα.
+<a href="http://www.kathimerini.gr/840398/opinion/epikairothta/politikh/ryakia-sto-telma" target="_blank">περισσότερα</a>
+</td>
+</tr>
+-->
+
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/vima.jpg" class="ngimgthumb"/></td>
+<td class="ngdesc"><a href="http://www.tovima.gr/science/article/?aid=755833" target="_blank">Τα ελληνικά πανεπιστήμια οnline</a><br/>
+	<b>Το Βήμα Science 22/11/2015 από τον Τάσο Καφαντάρη</b><br/><br/>
+«Γιατί ένας εκδοτικός οίκος - ένα university press - επενδύει σε μια πύλη Μαζικών Ανοιχτών Διαδικτυακών Μαθημάτων (MOOCs);» ρώτησα τον επικεφαλής του εγχειρήματος και πρόεδρο των Πανεπιστημιακών Εκδόσεων Κρήτης κ. Στέφανο Τραχανά.<br/>
+«Διότι τα διαδικτυακά μαθήματα είναι η νέα μορφή διδακτικού βιβλίου» μου απάντησε αφοπλιστικά.
+<a href="http://www.tovima.gr/science/article/?aid=755833" target="_blank">περισσότερα</a>
+</td></tr>
+
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/ert1.jpg" class="ngimgthumb"/></td>
+<td class="ngdesc"><a href="http://webtv.ert.gr/katigories/enimerosi/04noe2015-dorean-diadiktiaka-mathimata-gia-olous-apo-to-panepistimio-kritis/" target="_blank">Δωρεάν διαδικτυακά μαθήματα για όλους από τις Πανεπιστημιακές Εκδόσεις Κρήτης</a><br/>
+	<b>ΕΡΤ1 - Ενημέρωση με τη Μαριλένα Κασίμη και τον Γιάννη Δάρα 04/11/2015 από την Φανή Καλαθάκη</b><br/><br/>
+<a href="http://webtv.ert.gr/katigories/enimerosi/04noe2015-dorean-diadiktiaka-mathimata-gia-olous-apo-to-panepistimio-kritis/" target="_blank">περισσότερα</a>
+</td></tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/bookpress.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+	<a href="http://www.bookpress.gr/politismos/teleutaia-nea/pek-mathesis" target="_blank">Mathesis για όλους και δωρεάν</a><br/>
+	<b>Bookpress 30/10/2015 από την Ελένη Κορόβηλα</b><br/><br/>
+        Οι Πανεπιστημιακές Εκδόσεις Κρήτης ανοίγονται στην δωρεάν εκπαίδευση εξ αποστάσεως με έξι κύκλους μαθημάτων, τρεις φυσικής και τρεις ιστορίας. 
+	<a href="http://www.bookpress.gr/politismos/teleutaia-nea/pek-mathesis" target="_blank">περισσότερα</a><br/>
+</td>
+</tr>
+
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/vima.jpg" class="ngimgthumb"/></td>
+<td class="ngdesc"><a href="http://www.tovima.gr/society/article/?aid=748492" target="_blank">Ηλεκτρονική «Mathesis» από την Κρήτη</a><br/>
+	<b>Το Βήμα 25/10/2015 από την Μάρνυ Παπαματθαίου</b><br/><br/>
+Δωρεάν προσφορά στους φοιτητές, στους επαγγελματίες επιστήμονες και στο ευρύτερο κοινό διαδικτυακών μαθημάτων. 	
+<a href="http://www.tovima.gr/society/article/?aid=748492" target="_blank">περισσότερα</a>
+</td></tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/sintakton.jpg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="https://www.efsyn.gr/arthro/mathesis-otan-panepistimio-metakomizei-sto-diadiktyo" target="_blank">Mathesis, όταν το πανεπιστήμιο μετακομίζει στο διαδίκτυο</a><br/>
+<b>Εφημερίδα των Συντακτών 24/10/2015 από τον Σπύρο Μανουσέλη</b><br/><br/>
+Στα μέσα του επόμενου μήνα, και συγκεκριμένα στις 16-11-2015, θα ξεκινήσουν επίσημα οι δύο πρώτοι ελληνικοί κύκλοι των δωρεάν διαδικτυακών πανεπιστημιακών μαθημάτων του προγράμματος Mathesis.
+<a href="https://www.efsyn.gr/arthro/mathesis-otan-panepistimio-metakomizei-sto-diadiktyo" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/ethnos.gif" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="http://www.ethnos.gr/article.asp?catid=22768&subid=2&pubid=64271185" target="_blank">Οnline μαθήματα από τις Πανεπιστημιακές εκδόσεις Κρήτης</a><br/>
+	<b>Έθνος 17/10/2015 από τον Μανόλη Κοκολάκη</b><br/><br/>
+Διαδικτυακή Πανεπιστημιακή εκπαίδευση στα πρότυπα των κορυφαίων στον κόσμο Πανεπιστημίων του Χάρβαρντ και το MIT, ξεκινούν οι Πανεπιστημιακές Εκδόσεις Κρήτης.
+
+<a href="http://www.ethnos.gr/article.asp?catid=22768&subid=2&pubid=64271185" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/neakriti_.png" class="ngimgthumb"/></td>
+<td class="ngdesc">
+<a href="http://www.neakriti.gr/?page=newsdetail&DocID=1270717" target="_blank"/>Μαθήματα μέσω διαδικτύου από τις ΠΕΚ</a><br/>
+
+	<b>Νέα Κρήτη 3/10/2015 από τον Σταύρο Μουντουφάρη</b><br/><br/>
+Οι καιροί έχουν αλλάξει και μαζί ο τρόπος διδασκαλίας. Πλέον ο ρόλος των βιβλίων και της εκπαιδευτικής διαδικασίας είναι διαφορετικός, καθώς οι δυνατότητες που προσφέρει η νέα τεχνολογία μοιάζουν ασύλληπτες. Αρκεί να υπάρχουν άνθρωποι με όραμα, προοπτική και αγάπη για τη μάθηση.
+<a href="http://www.neakriti.gr/?page=newsdetail&DocID=1270717" target="_blank"/>περισσότερα</a>
+	</td><tr>
+<tr><td class="ngthumb"><img src="/c4x/edX/DemoX/asset/tvxs.png" class="ngimgthumb"/></td>
+<td class="ngdesc">
+<a href="http://tvxs.gr/news/paideia/mathesis-dorean-diadiktyaka-mathimata-gia-oloys" target="_blank"/>Δωρεάν διαδικτυακά μαθήματα για όλους</a><br/>
+	<b>Tvxs 25/09/2015</b><br/><br/>
+Το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων Mathesis, ιδρύθηκε το 2015 ως ένα ιδιαίτερο τμήμα των Πανεπιστημιακών Εκδόσεων Κρήτης (ΠΕΚ) με αποκλειστικό σκοπό τη δημιουργία και δωρεάν προσφορά στους φοιτητές, τους επαγγελματίες επιστήμονες και το ευρύτερο κοινό, διαδικτυακών μαθημάτων στο επίπεδο των καλύτερων διεθνών προτύπων.
+<a href="http://tvxs.gr/news/paideia/mathesis-dorean-diadiktyaka-mathimata-gia-oloys" target="_blank"/>περισσότερα</a>
+	</td><tr>
+
+</table>
+
+<!--
+
+<tr>
+ <td class="ngthumb"><img src=""/></td>
+ <td class="ngdesc"><a href="" target="_blank"></a><br/></td>
+</tr>
+
+<p class="ngabout">Σε τούτο τον χώρο αναδημοσιεύονται ή δίνονται σύνδεσμοι στα πιο ενδιαφέροντα <i>άρθρα γνώμης</i> &mdash;ή <i>μελέτες</i>&mdash; για τα Μαζικά Ανοικτά ΔΙαδικτυακά Μαθήματα (ΜΑΔΙΜ ή MOOCs) και τις επιδράσεις τους (θετικές και αρνητικές) στην αναδυόμενη νέα εποχή της πανεπιστημιακής (και όχι μόνο) εκπαίδευσης.
+
+</p>-->
+
+</td></tr></table>
+
+</section>
+

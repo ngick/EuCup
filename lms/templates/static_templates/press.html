@@ -1,0 +1,91 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">Media kit</%block>
+
+
+<style type="text/css">
+@media only screen and (min-device-width: 601px) {
+.content {width: 600px !important;}
+.prC {padding: 10px 10px 10px 10px;}
+}
+</style>
+
+<%
+pr_url='/c4x/edX/DemoX/asset/'
+pr_st='<br/><b>Στέφανος Τραχανάς</b><br/>Ίδρυμα Τεχνολογίας & Έρευνας'
+pr_ax='<br/><b>Άγγελος Χανιώτης</b><br/>Institute for Advanced Study, Princeton'
+pr_me='<br/><b>Μαρία Ευθυμίου</b><br/>Πανεπιστήμιο Αθηνών'
+pr_bk='<br/><b>Βασίλης Κάλφας</b><br/>Πανεπιστήμιο Θεσσαλονίκης'
+pr_f2a='Εφαρμοσμένη Κβαντομηχανική 1: Άτομα'
+pr_f2b='Εφαρμοσμένη Κβαντομηχανική 2: Μόρια'
+%>
+
+<section class="container about">
+
+<table class="ngabout">
+<tr><td class="ngabout"><%include file="menu-news.html"/></td>
+<td class="ngabout2">
+
+
+
+<h1>Media kit</h1>
+
+
+<table width="100%">
+<tr>
+<td>
+<table class="content" align="center">
+<tr><td colspan="3" class="prCT"><br/><b>ΝΟΕΜΒΡΙΟΣ  2016</b></td></tr>
+<tr>	
+	<td class="prC"></td>
+	<td class="prC"><a href="${pr_url}Mathesis.jpg"><img src="${pr_url}Mathesis_t.jpg"/><br/>Η νέα πλατφόρμα του Mathesis</a></td>
+	<td class="prC"></td>
+</tr>
+<tr>
+	<td class="prC"><a href="${pr_url}EfthimiouHist3.1.jpg"><img src="${pr_url}EfthimiouHist3.1_t.jpg"/><br/>Παγκόσμια Ιστορία 1 ${pr_me}</a></td>
+	<td class="prC"><a href="${pr_url}Kalfas1.jpg"><img src="${pr_url}Kalfas1_t.jpg"/><br/>Αρχαία ελληνική Φιλοσοφία ${pr_bk}</a></td>
+	<td class="prC"><a href="${pr_url}TrachanasPhys1.2.jpg"><img src="${pr_url}TrachanasPhys1.2_t.jpg" /><br/>Εισαγωγή στην Κβαντική Φυσική 2 ${pr_st}</a></td>
+</tr>
+
+
+<tr><td colspan="3" class="prCT"><br/><b>ΜΑΡΤΙΟΣ 2016</b></td></tr>
+
+
+
+<tr>
+	<td class="prC"><a href="${pr_url}Hist1.2.png"><img src="${pr_url}Hist1.2_t.jpg"/><br/>Η Επανάσταση του 1821 ${pr_me}</a></td>
+	<td class="prC"><a href="${pr_url}Hist1.2b.png"><img src="${pr_url}Hist1.2b_t.jpg"/><br/>Η Επανάσταση του 1821 ${pr_me}</a></td>
+	<td class="prC"><a href="${pr_url}Phys3b.png"><img src="${pr_url}Phys3b_t.jpg" /><br/>${pr_f2b} ${pr_st}</a></td>
+	<!--<td class="prC"><a href="${pr_url}Phys3c.jpg"><img src="${pr_url}Phys3c_t.jpg" /><br/>${pr_f2b} ${pr_st}</a></td> keep for next month-->
+</tr>
+<tr><td colspan="3" class="prCT"><br/><b>ΙΑΝΟΥΑΡΙΟΣ - ΦΕΒΡΟΥΑΡΙΟΣ 2016</b></td></tr>
+<tr>
+	<td class="prC"><a href="${pr_url}2016_T1.png"><img src="${pr_url}2016_T1_t.jpg" /></a></td>
+
+	<td class="prC"><a href="/c4x/edX/DemoX/asset/Hist2_1a.jpg"><img src="${pr_url}Hist2_1a_t.jpg"/><br/>Η μακρά ελληνιστική εποχή ${pr_ax}</a></td>
+	<td class="prC"><a href="/c4x/edX/DemoX/asset/Hist2_1.jpg"><img src="/c4x/edX/DemoX/asset/Hist2_1.jpg" /><br/>Η μακρά ελληνιστική εποχή ${pr_ax}</a></td>
+</tr>
+<tr>
+	<td class="prC"><a href="${pr_url}Phys2_1.jpg"><img src="${pr_url}Phys2a_t.jpg" /><br/>Εισαγωγή στη Σχετικότητα και την Κοσμολογία<br/><b>Θεόδωρος Τομαράς</b><br/>Πανεπιστήμιο Κρήτης</a></td>
+	<td class="prC"><a href="${pr_url}Phys3a.jpg"><img src="${pr_url}Phys3a_t.jpg" /><br/>${pr_f2a} ${pr_st}</a></td>
+</tr>
+<tr><td colspan="3" class="prCT"><br/><b>ΝΟΕΜΒΡΙΟΣ - ΔΕΚΕΜΒΡΙΟΣ 2015</b></td></tr>
+<tr>
+	<td class="prC"><a href="/c4x/edX/DemoX/asset/POSTER.jpg"><img src="/c4x/edX/DemoX/asset/POSTER.jpg" /><br/>Αφίσα</a></td>
+	<td class="prC"><a href="/c4x/edX/DemoX/asset/Hist1_1.jpg"><img src="/c4x/edX/DemoX/asset/Hist1_1.jpg" /><br/>Ιστορία του Νέου Ελληνισμού ${pr_me}</a></td>
+	<td class="prC"><a href="${pr_url}Phys1_1.jpg"><img src="${pr_url}Phys1_1.jpg" /><br/>Εισαγωγή στην Κβαντική Φυσική 1 ${pr_st}</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<p class="ngabout"></p>
+
+
+</td></tr></table>
+
+</section>
+

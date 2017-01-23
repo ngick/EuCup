@@ -1,0 +1,68 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">Έγραψαν και είπαν για εμάς.</%block>
+<section class="container about">
+
+<table class="ngabout">
+<tr><td class="ngabout"><%include file="menu-news.html"/></td>
+<td class="ngabout2">
+
+<style>
+.ngthumb{
+text-align:center;
+padding:2px;
+border-bottom:1px dotted;
+width:50px;
+padding-top:15px;
+padding-bottom:10px;
+}
+.ngimgthumb{
+max-width:100px;
+
+}
+.ngdesc{
+padding:2px;
+border-bottom:1px dotted;
+padding-top:10px;
+padding-bottom:10px;
+line-height:1.4em;
+}
+</style>
+
+<h1>Νέα - Απόψεις</h1>
+
+<table>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/MLogo.svg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="/c4x/edX/DemoX/asset/Έκθεση_προόδου_Mathesis.pdf" target="_blank">Έξι μήνες Mathesis &ndash; Έκθεση προόδου</a><br/>
+<b>Μάιος 2016 &ndash; <i>Συντάκτης:</i> Στέφανος Τραχανάς.</b>
+<br/><br/>
+Όπως έχει ήδη φανεί από τα μέχρι τώρα στοιχεία των αμερικανικών MOOCs, η επίδρασή τους φαίνεται να είναι πιο άμεση στην αλλαγή
+του διδακτικού μοντέλου μέσα στα ίδια τα πανεπιστήμια. Μια τέτοιου είδους επίδραση στην Ελλάδα...
+<a href="/c4x/edX/DemoX/asset/Έκθεση_προόδου_Mathesis.pdf" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+<tr>
+ <td class="ngthumb"><img src="/c4x/edX/DemoX/asset/MLogo.svg" class="ngimgthumb"/></td>
+ <td class="ngdesc">
+<a href="/c4x/edX/DemoX/asset/Mathesis_LEAFLET2016.pdf" target="_blank">Τα μαθήματα του Mathesis &ndash; Ενημερωτικό Φυλλάδιο</a><br/>
+<b>Μάρτιος 2016</b>
+<br/><br/>
+
+
+Τα μαθήματα είναι εγκατεστημένα στην εξελληνισμένη εκδοχή της πλατφόρμας OpenEdX &mdash;εκείνης που χρησιμοποιούν το Harvard και το MIT&mdash; και είναι "γυρισμένα" στο στούνιο των Πανεπιστημιακών Εκδόσεων Κρήτης...
+<a href="/c4x/edX/DemoX/asset/Mathesis_LEAFLET2016.pdf" target="_blank">περισσότερα</a>
+</td>
+</tr>
+
+
+</table>
+
+</td></tr></table>
+
+</section>
+

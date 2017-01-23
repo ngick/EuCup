@@ -1,0 +1,134 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<main class="accomplishment accomplishment-main">
+
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering">
+            <span class="deco-corner deco-corner-tl"></span>
+            <span class="deco-corner deco-corner-tr"></span>
+            <span class="deco-corner deco-corner-bl"></span>
+            <span class="deco-corner deco-corner-br"></span>
+
+            <div class="accomplishment-type" style="margin-bottom:1rem;margin-top:0;">
+<!--/static/certificates/images/ico-${course_mode_class}.png--> 
+                <span class="accomplishment-type-symbol" style="width:20rem;height:auto;margin-bottom:0;"><img class="src" src="/static/images/MathesisLogo.svg" alt=""></span>
+                <span class="accomplishment-type-label hd-4">Βεβαίωση επιτυχούς παρακολούθησης</span>
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement" style="padding-bottom:0;margin-bottom:0;border-bottom:0;">
+                    <p class="accomplishment-statement-lead" style="margin-bottom:0.1rem;">
+
+                <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.1rem;font-family:Open Sans;">Βεβαιώνεται με το παρόν ότι ο/η</span>
+                        <strong class="accomplishment-recipient hd-1 emphasized" style="margin-bottom:0.15rem;font-family:Open Sans;font-size:1.5rem;">${accomplishment_copy_name | h}</strong>
+                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.2rem;">παρακολούθησε και ολοκλήρωσε επιτυχώς το μάθημα<!--${accomplishment_copy_description_full}--></span>
+
+                        <span class="accomplishment-course hd-1 emphasized" style="margin-bottom:0.2rem;line-height:1.2;font-family:Open Sans;font-size:1.5rem;">
+                           <!-- <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>-->
+                            <span class="accomplishment-course-number">${course_number}</span>:
+                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
+                        </span>
+                    </p>
+
+                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:1rem;margin-bottom:0.2rem;">το οποίο προσφέρεται από το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων <b>Mathesis</b> των Πανεπιστημιακών Εκδόσεων Κρήτης του Ιδρύματος Τεχνολογίας και Έρευνας, <!--${accomplishment_copy_course_description}-->
+
+                % if mode != 'base':
+                            % if certificate_data:
+                                % for signatory in certificate_data.get('signatories', []):
+
+                                        <span class="organization">${signatory['organization']}</span><br/>
+
+                                  <!--  <p class="signatory-credentials copy copy-micro" style="margin-left:auto;margin-right:auto;width:100%;margin-bottom:0;line-height:1;">-->
+                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:.6rem;margin-bottom:0.2rem;">
+                                        <span class="role">${signatory['title']}</span>
+                                    </p>
+
+
+     			        % endfor
+                            % endif
+                % endif
+
+		</p>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories" style="padding-bottom:0;border-bottom:0;margin-bottom:1px;">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                            % if certificate_data:
+                                % for signatory in certificate_data.get('signatories', []):
+                                <div class="signatory">
+                                    <img class="signatory-signature" style="padding:0;margin-bottom:0;" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+
+                                    <h4 class="signatory-name hd-5">${signatory['name']}</h4>
+<!--                                    <p class="signatory-credentials copy copy-micro">
+                                        <span class="role">${signatory['title']}</span>
+                                        <span class="organization">${signatory['organization']}</span>
+                                    </p>-->
+                                </div>
+                                % endfor
+                            % endif
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div>
+
+          <!--  <div class="accomplishment-orgs">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo" src="/static/images/logo.png" alt="${platform_name}">
+                        </div>
+                    </li>
+
+                    % if organization_logo:
+                    <li class="wrapper-organization">
+                        <div class="organization">
+                            <img class="organization-logo" src="/static/images/logo.png" alt="${platform_name}">
+                        </div>
+                    </li>
+                    % endif
+                </ul>
+            </div>-->
+        </div>
+    </div>
+
+    <div class="wrapper-accomplishment-metadata">
+        <div class="accomplishment-metadata">
+           <!-- <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about | h}</h2> -->
+
+            <div class="wrapper-metadata">
+                <dl class="metadata accomplishment-recipient">
+                    <dt class="label sr-only">Awarded to:</dt>
+                    <dd class="value copy copy-meta">
+                        <span class="recipient-img">
+                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="">
+                        </span>
+                        <div class="recipient-details">
+                            <h3 class="recipient-name">${accomplishment_copy_name | h}</h3>
+                            <p class="recipient-username">${accomplishment_copy_username} @ ${platform_name}</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="metadata accomplishment-id">
+                    <dt class="label copy copy-meta">Αριθμός βεβαίωσης:<!--${certificate_id_number_title}--></dt>
+                    <dd class="value copy copy-base"><a href="/certificates/${certificate_id_number}">${certificate_id_number}</a></dd>
+                </dl>
+<!--                <dl class="metadata accomplishment-date">
+                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                    <dd class="value copy copy-base">${certificate_date_issued}</dd>
+                </dl>-->
+            </div>
+        </div>
+    </div>
+
+</main>

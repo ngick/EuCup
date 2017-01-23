@@ -1,0 +1,135 @@
+
+<style>
+/*css starts*/
+nav.ngnav {
+    border: 0px solid #E0D9E1;
+    color: #fff;
+    display: block;
+    margin: 0;
+    width: 230px;
+    overflow: hidden;
+}
+nav.ngnav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.ngnav ul li {
+    margin: 0;
+/*    display: inline-block;*/
+	display: block;
+    list-style-type: none;
+    transition: all 0.2s;
+}
+
+nav.ngnav > ul > li > a {
+    color: #575757;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+
+}
+nav.ngnav > ul > li >a:hover {
+color: #1790c7;
+}
+
+nav.ngnav li > ul{
+    display : none;
+    margin-top:-48px;
+    margin-left:220px;
+    background-color: #bbb;
+
+}
+
+nav.ngnav li > ul li{
+    display: block;
+}
+
+nav.ngnav  li > ul li a {
+    color: #111;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+}
+
+nav.ngnav li:hover {
+    background-color: #d5edf8;
+}
+nav.ngnav li:hover > ul{
+    position:absolute;
+    display : block;
+}
+p.ngabout{
+    text-align:justify;
+    font-family:"Open Sans";
+}
+td.ngabout{
+ background-color: #F7F7F7;
+}
+td.ngabout2{
+padding:10px;
+width:100%;
+}
+table.ngabout{
+width:100%;
+}
+
+section.container.about{
+padding:0 30px!important;
+}
+
+
+/* the following two are for activating the current menu item with the javascript bellow*/
+.gnav li.active {
+    background-color:#d5edf8;
+}
+.gnav li.active a {
+    color:#1790c7;
+    font-weight:bold;
+}
+.prC{
+ text-align:center;
+ line-height: 1.2em;
+ font-size:0.8em;
+}
+.prCT{
+text-align:center;
+font-size:1.1em;
+}
+
+.prC img{height:100px;}
+
+</style>
+
+<script type="text/javascript">
+$(function () {
+    setNavigation();
+});
+
+function setNavigation() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".gnav a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('active');
+        }
+    });
+}
+</script>
+
+
+
+<nav class="ngnav">
+    <ul class="gnav">
+          <li><a href="${marketing_link('NEWS')}">Νέα - Απόψεις</a></li>
+
+        <li><a href="${marketing_link('BLOG')}">Έγραψαν και είπαν για εμάς</a></li>
+        <li><a href="${marketing_link('PRESS')}">MediaKit</a></li>
+    </ul>
+</nav>
+
