@@ -15,7 +15,7 @@ course_mode_class = course_mode if course_mode else ''
 
             <div class="accomplishment-type" style="margin-bottom:1rem;margin-top:0;">
 <!--/static/certificates/images/ico-${course_mode_class}.png--> 
-                <span class="accomplishment-type-symbol" style="width:20rem;height:auto;margin-bottom:0;"><img class="src" src="/static/images/MathesisLogo.svg" alt=""></span>
+                <span class="accomplishment-type-symbol" style="width:20rem;height:auto;margin-bottom:0;"><img class="src" src="/static/EuCup/images/MathesisLogo.svg" alt=""></span>
                 <span class="accomplishment-type-label hd-4">Βεβαίωση επιτυχούς παρακολούθησης</span>
             </div>
 
@@ -25,7 +25,7 @@ course_mode_class = course_mode if course_mode else ''
 
                 <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.1rem;font-family:Open Sans;">Βεβαιώνεται με το παρόν ότι ο/η</span>
                         <strong class="accomplishment-recipient hd-1 emphasized" style="margin-bottom:0.15rem;font-family:Open Sans;font-size:1.5rem;">${accomplishment_copy_name | h}</strong>
-                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.2rem;">παρακολούθησε και ολοκλήρωσε επιτυχώς το μάθημα<!--${accomplishment_copy_description_full}--></span>
+                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.2rem;font-family:Open Sans;">παρακολούθησε και ολοκλήρωσε επιτυχώς το μάθημα<!--${accomplishment_copy_description_full}--></span>
 
                         <span class="accomplishment-course hd-1 emphasized" style="margin-bottom:0.2rem;line-height:1.2;font-family:Open Sans;font-size:1.5rem;">
                            <!-- <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>-->
@@ -34,7 +34,7 @@ course_mode_class = course_mode if course_mode else ''
                         </span>
                     </p>
 
-                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:1rem;margin-bottom:0.2rem;">το οποίο προσφέρεται από το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων <b>Mathesis</b> των Πανεπιστημιακών Εκδόσεων Κρήτης του Ιδρύματος Τεχνολογίας και Έρευνας, <!--${accomplishment_copy_course_description}-->
+                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:1rem;margin-bottom:0.2rem;font-family:Open Sans;">το οποίο προσφέρεται από το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων <b>Mathesis</b> των Πανεπιστημιακών Εκδόσεων Κρήτης του Ιδρύματος Τεχνολογίας και Έρευνας, <!--${accomplishment_copy_course_description}-->
 
                 % if mode != 'base':
                             % if certificate_data:
@@ -44,7 +44,7 @@ course_mode_class = course_mode if course_mode else ''
 
                                   <!--  <p class="signatory-credentials copy copy-micro" style="margin-left:auto;margin-right:auto;width:100%;margin-bottom:0;line-height:1;">-->
                     <p class="accomplishment-statement-detail copy copy-lead" style="font-size:.6rem;margin-bottom:0.2rem;">
-                                        <span class="role">${signatory['title']}</span>
+                                        <span class="role" style="font-family:Open Sans;">${signatory['title']}</span>
                                     </p>
 
 

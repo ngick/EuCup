@@ -1,7 +1,7 @@
 /*the following are mods */
 
 /*courses homepage GLOBAL STUFF*/
-.body{
+html, body{
 background:#efefef!important;
 }
 .wrapper-footer, .home{
@@ -25,7 +25,13 @@ background:#efefef!important;
 .courses-container .courses .course .course-info .course-title{
 color:grey!important;
 }
-
+.home>header .title>.heading-group,
+.home>header .title>.heading-group h1{
+text-align:center;
+}
+.home>header .title>.heading-group p{
+font-family:"Open Sans";
+}
 /*find-courses*/
 .find-courses .courses{
 padding-top:70px!important;
@@ -79,7 +85,12 @@ font-weight:400;
 /*end of password reset form*/
 
 /*ACCOUNT SETTINGS */
-.account-settings-container .wrapper-header .account-settings-header-subtitle{
+/* hide top paragraph */
+.account-settings-sections .section .account-settings-header-subtitle{
+display:none!important;
+}
+/*Account Settings hide top menu*/
+.wrapper-account-settings .wrapper-header .account-nav{
 display:none!important;
 }
 
@@ -154,7 +165,7 @@ background:none;
 }
 
 /*the following are for the small dropdown button on top right */
-header.global .user .dropdown{
+.header.global .user .dropdown{
 background:#efefef;
 }
 
