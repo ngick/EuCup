@@ -26,7 +26,7 @@ from openedx.core.djangolib.markup import HTML
     % if demand_hint_possible:
     <button class="hint-button" data-value="${_('Hint')}">${_('Hint')}</button>
     % endif
-    % if reset_button:
+    % if reset_button and not answer_available:
     <button class="reset" data-value="${_('Reset')}">${_('Reset')}<span class="sr"> ${_("your answer")}</span></button>
     % endif
     % if save_button:

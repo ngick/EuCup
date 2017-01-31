@@ -1,0 +1,14 @@
+<div class="status submission-error hidden" aria-live="polite">
+    <h4 class="message-title"><%- gettext("We couldn't create your account.") %></h4>
+    <ul class="message-copy"></ul>
+</div>
+
+
+<div class="toggle-form">
+    <div class="section-title">
+<h1>Προσοχή!</h1>
+        <h2>
+            <span class="text">Οι εγγραφές κλείνουν προσωρινά<br/>ώστε να ολοκληρωθεί η διαδικασία αναβάθμισης.<br/><br/>Σύντομα και πάλι κοντά σας.<br/></span>
+        </h2>
+    </div>
+</div>
