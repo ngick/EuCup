@@ -24,6 +24,8 @@ background:#efefef!important;
 
 .courses-container .courses .course .course-info .course-title{
 color:grey!important;
+line-height:21px!important;
+font-size:17px!important;
 }
 .home>header .title>.heading-group,
 .home>header .title>.heading-group h1{
@@ -112,11 +114,17 @@ text-transform:none !important;
 body.discussion .post-label-by-community-ta, .discussion-module .post-label-by-community-ta, .discussion-user-threads .post-label-by-community-ta{
 text-transform:none!important;
 }
+
+/*hide FIND COURSES FROM forum*/
+.left.nav-global.list-inline.authenticated{
+/*display:none!important;*/
+}
+
 /*color of background of forum*/
 .window-wrap{
 background-color:#efefef;
 }
-/*for making the number of posts red, when there are new posts in theads that I have visited*/
+/*for making the number of posts red, when there are new posts in theads that I have visited DOESNT WORK ON EUCALYPTUS*/
 span.forum-nav-thread-comments-count.is-unread{
 color: red;
 }
@@ -165,13 +173,14 @@ background:none;
 }
 
 /*the following are for the small dropdown button on top right */
-.header.global .user .dropdown{
-background:#efefef;
+.header-global .user .dropdown{
+background:none!important;
 }
 
 .home .highlighted-courses{
 margin-bottom:0px;
 }
+
 
 /*color for the form login-register*/
 .login-register{
