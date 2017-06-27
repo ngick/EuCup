@@ -2,3 +2,8 @@ files that need to change for mathjax to work:
 
 
 common/templates/mathjax_include.html
+
+/cms/static/cms/js/require-config.js
+
+the path should be
+src="/static/EuCup/js/MathJax-master/MathJax.js?config=TeX-MML-AM_SVG"
