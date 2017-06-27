@@ -107,12 +107,12 @@ from django.utils.http import urlquote_plus
                   % if certificate_invalidated:
                   <p class="copy">${_("Your certificate has been invalidated. Please contact your course team if you have any questions.")}</p>
                   %elif is_downloadable:
-                  <div class="msg-content">
+                  <!--div class="msg-content">
                     <h2 class="title">${_("Your certificate is available")}</h2>
                     <p class="copy">
                       ${_("You can keep working for a higher grade, or request your certificate now.")}
                     </p>
-                  </div>
+                  </div-->
                   <div class="msg-actions">
                     %if show_cert_web_view and cert_web_view_url:
                     <a class="btn" href="${cert_web_view_url | h}" target="_blank" title="${_('View certificate in a new browser window or tab.')}">

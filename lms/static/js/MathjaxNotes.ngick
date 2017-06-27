@@ -1,0 +1,4 @@
+files that need to change for mathjax to work:
+
+
+common/templates/mathjax_include.html
