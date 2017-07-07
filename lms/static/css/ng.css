@@ -104,7 +104,7 @@ margin-top:-10px;
 
 /*FORUM*/
 /*preview*/
-.container .discussion-body .wmd-preview-label, section.outside-app .discussion-body .wmd-preview-label, .wrapper-account-settings .discussion-body .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-body .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-body .wmd-preview-label, .container .discussion-module .wmd-preview-label, section.outside-app .discussion-module .wmd-preview-label, .wrapper-account-settings .discussion-module .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-module .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-module .wmd-preview-label, .container .discussion-user-threads .wmd-preview-label, section.outside-app .discussion-user-threads .wmd-preview-label, .wrapper-account-settings .discussion-user-threads .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-user-threads .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-user-threads .wmd-preview-label{
+/*.container .discussion-body .wmd-preview-label, section.outside-app .discussion-body .wmd-preview-label, .wrapper-account-settings .discussion-body .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-body .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-body .wmd-preview-label, .container .discussion-module .wmd-preview-label, section.outside-app .discussion-module .wmd-preview-label, .wrapper-account-settings .discussion-module .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-module .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-module .wmd-preview-label, .container .discussion-user-threads .wmd-preview-label, section.outside-app .discussion-user-threads .wmd-preview-label, .wrapper-account-settings .discussion-user-threads .wmd-preview-label, .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .discussion-user-threads .wmd-preview-label, .view-profile .wrapper-profile-sections .discussion-user-threads .wmd-preview-label{
 text-transform:none!important;
 }
 .post-label-by-staff, .post-label-pinned, .post-label-following{
@@ -114,7 +114,7 @@ text-transform:none !important;
 body.discussion .post-label-by-community-ta, .discussion-module .post-label-by-community-ta, .discussion-user-threads .post-label-by-community-ta{
 text-transform:none!important;
 }
-
+*/
 /*hide FIND COURSES FROM forum*/
 .left.nav-global.list-inline.authenticated{
 /*display:none!important;*/
@@ -125,9 +125,9 @@ text-transform:none!important;
 background-color:#efefef;
 }
 /*for making the number of posts red, when there are new posts in theads that I have visited DOESNT WORK ON EUCALYPTUS*/
-span.forum-nav-thread-comments-count.is-unread{
+/*span.forum-nav-thread-comments-count.is-unread{
 color: red;
-}
+}*/
 
 /*hiding the email icon from forum*/
 .home-helpgrid tr.helpgrid-row.helpgrid-row-notification{
