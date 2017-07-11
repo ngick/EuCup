@@ -9,6 +9,35 @@
 
 <!--ngick already moved to ngextra.css after updating assets remove it-->
 <style>
+/*FOR HIDDING INDEX AT PRINT */
+@media print
+{
+  course-wrapper .course-content .sequence .path{
+   margin-top:2px!important;
+
+  }
+        .container>div{
+      border:0!important;
+    }
+        .course-index, div.equation, .bookmark-button-wrapper, .indicator-container, .action{
+                display:none!important;
+    }
+
+        .xblock-student_view{
+                border-bottom:0!important;
+    }
+        .solution-span, .choicegroup, .AvoidPageBreak{
+        page-break-inside:avoid;
+    }
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+
+
+
 /*for hidding a link like physics, history in the about page course just after the course title*/
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 button{
 display:none!important;
@@ -60,7 +89,8 @@ margin-top:30px;
 }
 .rightcol{
 float:right;
-font-size:25px;
+font-size:18px;
+font-weight:bold;
 margin-top:35px;
 }
 .midcol{
@@ -75,7 +105,7 @@ text-align:center;
 
 <div class="wrapper wrapper-footer">
   <footer id="footer-openedx">
-      <nav class="nav-inline">
+<!--      <nav class="nav-inline">
         <ol>
           <span><a href="${marketing_link('FOREAS')}">ΠΕΡΙ</a></span>
           <span><a href="${marketing_link('NEWS')}">ΝΕΑ</a></span>
@@ -83,41 +113,36 @@ text-align:center;
           <span><a href="${reverse('honor')}">ΟΡΟΙ ΧΡΗΣΗΣ</a></span>
           <span><a href="${marketing_link('CONTACT')}">ΕΠΙΚΟΙΝΩΝΙΑ</a></span>
         </ol>
-      </nav>
+      </nav> -->
 
 <p><br/></p>
 <p><br/></p>
 <div class="leftcol">
-<font size="" style="color:#575757">&copy; Mathesis</font>
-<a target="_blank" href="http://open.edx.org"><img alt="Βασισμένο στο Open edX" src="${static.url('/static/EuCup/images/openedx.png')}" width="100" style="margin-top:-6px;"></a>
+<a target="_blank" href="http://open.edx.org"><img alt="based on Open edX" src="${static.url('/static/EuCup/images/openedx.png')}" width="100" style="margin-top:-6px;"></a>
 
 </div>
 
 
 <div class="rightcol">
-<a target="_blank" href="https://www.facebook.com/mathesisatcreteuniversitypress" class="share"><i class="icon fa fa-facebook-square"></i></a>
+
+<a href="http://mathesis.cup.gr" alt="Visit Mathesis.cup.gr"><font size="" style="color:#575757">&copy; Mathesis</font></a>
+
+
+<!--<a target="_blank" href="https://www.facebook.com/mathesisatcreteuniversitypress" class="share"><i class="icon fa fa-facebook-square"></i></a>
 <a target="_blank" href="https://twitter.com/mathesiscup" class="share"><i class="icon fa fa-twitter-square"></i></a>
 <a target="_blank" href="https://www.linkedin.com/company/mathesis-crete-university-press" class="share"> <i class="icon fa fa-linkedin-square"></i></a>
-<a target="_blank" href="https://plus.google.com/103481945224325530648" class="share"> <i class="icon fa fa-google-plus-square"></i></a>
+<a target="_blank" href="https://plus.google.com/103481945224325530648" class="share"> <i class="icon fa fa-google-plus-square"></i></a>-->
 </div>
 <div class="midcol">
 
 <table style="margin-right:auto;margin-left:auto;"><tr>
-<td style="vertical-align:middle;padding-right:20px;">
+<!--td style="vertical-align:middle;padding-right:20px;">
 	<a target="_blank" href="http://www.cup.gr">
 <img src="${static.url('/static/EuCup/images/cupfl_o.svg')}" height="100px">
-</td>
+</td-->
 
-<!--<td style="vertical-align:middle;padding-right:20px;">
-	<font size="-1" style="color:#575757">Πανεπιστημιακές Εκδόσεις Κρήτης &ndash; CUP
-</font></a>
-<a target="_blank" href="http://www.forth.gr/"><font style="color: rgb(87, 87, 87); letter-spacing: 1px; font-size: 0.66em;"><br>Ίδρυμα Τεχνολογίας και Έρευνας &ndash; FORTH<br></font></a>
-
-
-</td>
--->
-<td style="vertical-align:middle; text-align: center;"><font size="-1.2">Με δωρεά από το</font><br/><a target="_blank" href="http://www.snf.org/el/">
-<img src="${static.url('/static/EuCup/images/SNFv.png')}" alt="ΙΔΡΥΜΑ ΣΤΑΥΡΟΣ ΝΙΑΡΧΟΣ" height="70px"></a></td>
+<!--<td style="vertical-align:middle; text-align: center;"><font size="-1.2">Με δωρεά από το</font><br/><a target="_blank" href="http://www.snf.org/el/">
+<img src="${static.url('/static/EuCup/images/SNFv.png')}" alt="ΙΔΡΥΜΑ ΣΤΑΥΡΟΣ ΝΙΑΡΧΟΣ" height="70px"></a></td>-->
 	<td style="text-align:center; font-size:1.9em;width: 100px;">
 
 </td></tr>
