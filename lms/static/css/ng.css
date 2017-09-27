@@ -183,8 +183,12 @@ margin-bottom:0px;
 
 
 /*color for the form login-register*/
+.login-register-content{
+background:none!important;
+}
 .login-register{
-background:none;
+background:none!important;
+display:inline!important;
 }
 .login-form .section-title{
 display:none;
