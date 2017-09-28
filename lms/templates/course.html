@@ -27,17 +27,6 @@ from django.core.urlresolvers import reverse
       </h2>
       <!--NGICK START-->
       <%
-      if course.advertised_start is not None:
-         advdate=course.advertised_start.split('-')
-         advdateday=advdate[2].split('T')
-         course_date_string=advdateday[0]+'/'+advdate[1]+'/'+advdate[0]
-         #advdate=datetime.strptime(course.advertised_start,'%Y-%m-%dT%I:%M:%SZ')
-         #adv_date_string=advdate.strftime('%d/%m/%Y')         
-      else:
-         course_date_string = ''
-      %>
-      <!--NGICKCS ${course.start}  ${course.advertised_start} END-->
-      <%
       if course.start is not None:
           course_date_string = course.start.strftime('%d/%m/%Y')
           xxtype = type(course.start)
@@ -46,6 +35,18 @@ from django.core.urlresolvers import reverse
 
       %>
       <!--NGICKTYPE ${xxtype}-->
+      <%
+      if course.advertised_start is not None:
+         #advdate=course.advertised_start.split('-')
+         #advdateday=advdate[2].split('T')
+         #course_date_string=advdateday[0]+'/'+advdate[1]+'/'+advdate[0]
+         course_date_string=course.advertised_start
+         ##advdate=datetime.strptime(course.advertised_start,'%Y-%m-%dT%I:%M:%SZ')
+         ##adv_date_string=advdate.strftime('%d/%m/%Y')         
+      else:
+         course_date_string = ''
+      %>
+      <!--NGICKCS ${course.start}  ${course.advertised_start}  course_date_string = ${course_date_string} END-->
       % if course.advertised_start is not None:
           <div class="course-date" aria-hidden="true"><!--${_("Starts")}: ${course.advertised_start}-->
           % if unicode('SELFPACED') in unicode(course.short_description):
