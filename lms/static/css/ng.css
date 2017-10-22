@@ -298,3 +298,54 @@ span.shortdesc{
 font-style:italic;
 }
 
+/*New for relase ginkgo*/
+/*remove the double title for every xblock*/
+.xblock .xblock h2{
+display:none;
+}
+
+/*The following are for about page*/
+  .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1{
+   font-size:x-large; 
+  }
+/*for hidding a link like physics, history in the about page course just after the course title*/
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 button{
+display:none!important;
+}
+a.nglink{
+    color:black;
+    cursor: pointer;
+  }
+a.nglink:link{
+  color:black !important;
+}
+a.nglink:visited{
+  color:black !important;
+}
+a.nglink:hover{
+ color:green;
+}
+  p.ng{
+   text-align:justify; 
+   font-family:"Open Sans";
+      }
+  ul.ng{
+   text-align:justify; 
+   font-family:"Open Sans";
+  }
+  .ngbanner{
+    background: rgba(255,255,255,0.93);
+    border: 1px solid #646464;
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding:15px;
+    margin-top:20px;
+  }
+/*end of about page */
+
+.banner_c{
+position:absolute;
+height:18px;
+background:green;
+color:white;
+line-height:18px;
