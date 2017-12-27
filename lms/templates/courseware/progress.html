@@ -63,17 +63,34 @@ from django.utils.http import urlquote_plus
                     <div class="auto-cert-message" id="course-success">
                         <div class="has-actions">
                             <% post_url = reverse('generate_user_cert', args=[unicode(course.id)]) %>
-                            <!--div class="msg-content">
-                                <h4 class="hd hd-4 title">${certificate_data.title}</h4>
-                                <p class="copy">${certificate_data.msg}</p>
-                            </div-->
+                            <div class="msg-content">
+                                <!--h4 class="hd hd-4 title">${certificate_data.title}</h4-->
+                                <h4 class="hd hd-4 title">Συγχαρητήρια, πληροίτε τις προϋποθέσεις για τη λήψη βεβαίωσης επιτυχούς παρακολούθησης!</h4>
+                                <!--p class="copy">${certificate_data.msg} </p-->
+                                <p class="copy">Το σύστημα πληρωμών για την έκδοση βεβαιώσεων έχει ενεργοποιηθεί.<br/>
+                                Το κόστος για την έκδοση βεβαίωσης είναι 15&euro; και οι τρόποι πληρωμής που προβλέπονται είναι μέσω:</p>
+                               <ol class="copy" style="text-align:left;margin-top:0px;">
+                                 <li>Paypal (με χρήση χρεωστικής/πιστωτικής κάρτας ή με λογαριασμό Paypal)</li>
+                                 <li>τραπεζικής κατάθεσης</li>
+                                 <li>αντικαταβολής (με επιπλέον κόστος 3 ευρώ) και</li>
+                                 <li>πληρωμής σε κατάστημα.</li>
+                              </ol>
+
+                            <p class="copy">Η βεβαίωση επιτυχούς παρακολούθησης εκδίδεται <b>ΔΩΡΕΑΝ</b> για ανέργους εγγεγραμμένους στον ΟΑΕΔ.<!--, μετά από πιστοποίηση της ανεργίας τους μέσω του συστήματος πληρωμών--></p>
+                            </div>
                             <div class="msg-actions">
                                 %if certificate_data.cert_web_view_url:
                                 <a class="btn" href="${certificate_data.cert_web_view_url}" target="_blank">${_("View Certificate")} <span class="sr">${_("Opens in a new browser window")}</span></a>
                                 %elif certificate_data.cert_status == CertificateStatuses.downloadable and certificate_data.download_url:
                                 <a class="btn" href="${certificate_data.download_url}" target="_blank">${_("Download Your Certificate")} <span class="sr">${_("Opens in a new browser window")}</span></a>
                                 %elif certificate_data.cert_status == CertificateStatuses.requesting:
-                                <button class="btn generate_certs" data-endpoint="${post_url}" id="btn_generate_cert">${_('Request Certificate')}</button>
+                                <form action="https://pay.mathesis.org/el/payments/pay/" method="POST" >
+                                  <input type="hidden" name="uname" value="${student.username}">
+                                  <input type="hidden" name="email" value="${student.email}">
+                                  <input type="hidden" name="uid" value="${student.id}">
+                                  <input type="hidden" name="cid" value="${course.id}">
+                                  <input type="submit" value="Έκδοση Βεβαίωσης" style="display:block;">
+                                </form>
                                 %endif
                             </div>
                         </div>
