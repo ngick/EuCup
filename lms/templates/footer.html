@@ -9,7 +9,38 @@
 
 <!--ngick already moved to ngextra.css after updating assets remove it-->
 <style>
+
+
+
+/*in dashboard remove the corse start date*/
+.dashboard .my-courses .course .details .course-info .info-date-block{ display:none!important;}
+
+
+/*remove the double title for every xblock*/
+.xblock .xblock h3.unit-title{
+display:none;
+}
+
+
+
 /*FOR HIDDING INDEX AT PRINT */
+@media all {
+  .watermark {
+        display: none;
+        position: fixed !important;
+        /*background-image:url("http://mathesis.org/assets/courseware/v1/7956d78086ea05bab452358a7e1c0608/asset-v1:Physics+QP1.1+2018_T1+type@asset+block/ch7fg1_o.svg");*/
+        opacity: 0.25;
+        width: 80%;
+        text-align: center;
+        height:auto;
+        z-index: 1000;
+        /*top:700px;
+        font-size: 3em;
+        right:5px;*/
+    }
+}
+
+
 @media print
 {
   course-wrapper .course-content .sequence .path{
@@ -29,10 +60,27 @@
         .solution-span, .choicegroup, .AvoidPageBreak{
         page-break-inside:avoid;
     }
+        .pageBreak{
+        page-break-after: always;
+    }
     .no-print, .no-print *
     {
         display: none !important;
     }
+     .watermark {
+        display: inline!important; 
+        position: fixed !important;
+        /*background-image:url("http://mathesis.org/assets/courseware/v1/7956d78086ea05bab452358a7e1c0608/asset-v1:Physics+QP1.1+2018_T1+type@asset+block/ch7fg1_o.svg");*/
+        opacity: 0.25;
+        width: 80%;
+        height:auto;
+        text-align: center;
+        z-index: 1000;
+        /*top:700px;
+        font-size: 3em;
+        right:5px;*/
+    }
+
 }
 
 
@@ -125,7 +173,7 @@ text-align:center;
 
 <div class="rightcol">
 
-<a href="http://mathesis.cup.gr" alt="Visit Mathesis.cup.gr"><font size="" style="color:#575757">&copy; Mathesis</font></a>
+<font size="" style="color:#575757">&copy; S. Trachanas</font>
 
 
 <!--<a target="_blank" href="https://www.facebook.com/mathesisatcreteuniversitypress" class="share"><i class="icon fa fa-facebook-square"></i></a>

@@ -20,7 +20,9 @@ from openedx.core.djangolib.markup import HTML, Text
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
                   <h1>${Text(_(u"Welcome to the Open edX{registered_trademark} platform!")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</h1>
                   ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See http://open.edx.org for more information.
-                  <p>${_("Free Online supplement for the book S. Trachanas,<br/>An Introduction to Quantum Physics, Wiley-VCH, 2017<br/>(Translated and edited by M. Antonoyiannakis and L. Tsetseris).")}</p>
+                  <p><span style="font-size:x-large!important;">Free Online Supplement for the book</span> <br/>S. Trachanas, An Introduction to Quantum Physics, Wiley-VCH, 2017<br/>(Translated and edited by M. Antonoyiannakis and L. Tsetseris)
+<!--br/>Please note that this material is work in progress. It will be complete &mdash;and, hopefully free of errors&mdash; by December 2017, when our book will be available-->
+</p>
               % endif
             </div>
             % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):

@@ -58,7 +58,7 @@ from django.core.urlresolvers import reverse
           <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" 
 
           % if unicode('SELFPACED') in unicode(course.short_description):
-            data-string="by Tasos Epitropakis"
+            data-string="Translated and edited by Tasos Epitropakis"
           % elif unicode('DISABLED') in unicode(course.short_description):
             data-string=""
           % else:
