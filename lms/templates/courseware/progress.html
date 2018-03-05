@@ -39,9 +39,9 @@ from django.utils.http import urlquote_plus
 
 <%include file="/courseware/course_navigation.html" args="active_page='progress'" />
 <%##ngick added
-enablecert='True'
+enablecert=True
 if 'Physics' in str(course.id) and ('physics.uoc.gr' in str(student.email) or 'materials.uoc.gr' in str(student.email) or 'tem.uoc.gr'):
-    enablecert='False'
+    enablecert=False
 endif
 
 
