@@ -36,8 +36,12 @@ else:
 % if cert_status['status'] == 'processing':
   <p class="message-copy">${_("Final course details are being wrapped up at this time. Your final standing will be available shortly.")}</p>
 % elif cert_status['status'] in ('generating', 'ready', 'notpassing', 'restricted', 'auditing', 'unverified'):
-  <p class="message-copy">${_("Your final grade:")}
+  <p class="message-copy"><!-- COURSEOVERVIEW: ${course_overview}-->
+% if str(course_overview) != 'course-v1:History+Hist3.3+2017_T4':
+${_("Your final grade:")}
   <span class="grade-value">${"{0:.0f}%".format(float(cert_status['grade'])*100)}</span>.
+% endif
+
     % if cert_status['status'] == 'notpassing':
       % if enrollment.mode != 'audit':
         ${_("Grade required for a {cert_name_short}:").format(cert_name_short=cert_name_short)} <span class="grade-value">
@@ -69,6 +73,7 @@ else:
         <li class="action"><span class="disabled">
             ${_("Your {cert_name_short} is Generating").format(cert_name_short=cert_name_short)}</span></li>
       % elif cert_status['show_download_url'] and cert_status.get('show_cert_web_view', False):
+<!--_cert_status_ngick: ${cert_status} course_overview:${course_overview} -->
         <li class="action action-certificate">
         <a class="btn" href="${cert_status['cert_web_view_url']}" target="_blank"
            title="${_('This link will open the certificate web view')}">
