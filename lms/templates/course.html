@@ -51,6 +51,8 @@ from django.core.urlresolvers import reverse
           <div class="course-date" aria-hidden="true"><!--${_("Starts")}: ${course.advertised_start}-->
           % if unicode('SELFPACED') in unicode(course.short_description):
             Αυτομελέτη
+          % elif unicode('pasatempo') in unicode(course.short_description):
+            Παρακολούθηση στο δικό σας ρυθμό
           % elif unicode('DISABLED') in unicode(course.short_description):
 
           % else:

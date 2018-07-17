@@ -20,30 +20,30 @@ course_mode_class = course_mode if course_mode else ''
             </div>
 
             <div class="wrapper-statement-and-signatories">
-                <div class="accomplishment-statement" style="padding-bottom:0;margin-bottom:0;border-bottom:0;">
+                <div class="accomplishment-statement" style="padding-bottom:0;margin-bottom:0;border-bottom:0;width:99%;">
                     <p class="accomplishment-statement-lead" style="margin-bottom:0.1rem;">
 
                 <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.1rem;font-family:Open Sans;">Βεβαιώνεται με το παρόν ότι ο/η</span>
-                        <strong class="accomplishment-recipient hd-1 emphasized" style="margin-bottom:0.15rem;font-family:Open Sans;font-size:1.5rem;">${accomplishment_copy_name | h}</strong>
+                        <strong class="accomplishment-recipient hd-1 emphasized" style="margin-bottom:0.15rem;font-family:Open Sans;font-size:1.4rem;">${accomplishment_copy_name | h}</strong>
                         <span class="accomplishment-summary copy copy-lead" style="margin-bottom:0.2rem;font-family:Open Sans;">παρακολούθησε και ολοκλήρωσε επιτυχώς το μάθημα<!--${accomplishment_copy_description_full}--></span>
 
-                        <span class="accomplishment-course hd-1 emphasized" style="margin-bottom:0.2rem;line-height:1.2;font-family:Open Sans;font-size:1.5rem;">
+                        <span class="accomplishment-course hd-1 emphasized" style="margin-bottom:0.2rem;line-height:1.2;font-family:Open Sans;font-size:1.4rem;">
                            <!-- <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>-->
                             <span class="accomplishment-course-number">${course_number}</span>:
                             <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
                         </span>
                     </p>
 
-                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:1rem;margin-bottom:0.2rem;font-family:Open Sans;">το οποίο προσφέρεται από το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων <b>Mathesis</b> των Πανεπιστημιακών Εκδόσεων Κρήτης του Ιδρύματος Τεχνολογίας και Έρευνας, <!--${accomplishment_copy_course_description}-->
+                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:.9rem;margin-bottom:0.2rem;font-family:Open Sans;">το οποίο προσφέρεται από το Κέντρο Ανοικτών Διαδικτυακών Μαθημάτων <b>Mathesis</b> των Πανεπιστημιακών Εκδόσεων Κρήτης του Ιδρύματος Τεχνολογίας και Έρευνας, <!--${accomplishment_copy_course_description}-->
 
                 % if mode != 'base':
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
 
-                                        <span class="organization">${signatory['organization']}</span><br/>
+                                        <span class="organization">${signatory['organization']}</span>
 
-                                  <!--  <p class="signatory-credentials copy copy-micro" style="margin-left:auto;margin-right:auto;width:100%;margin-bottom:0;line-height:1;">-->
-                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:.6rem;margin-bottom:0.2rem;">
+                                   <!--p class="signatory-credentials copy copy-micro" style="margin-left:auto;margin-right:auto;width:100%;margin-bottom:0;line-height:1;"-->
+                    <p class="accomplishment-statement-detail copy copy-lead" style="font-size:.7rem;margin-bottom:0.2rem;">
                                         <span class="role" style="font-family:Open Sans;">${signatory['title']}</span>
                                     </p>
 
@@ -52,7 +52,7 @@ course_mode_class = course_mode if course_mode else ''
                             % endif
                 % endif
 
-		</p>
+		<!--/p-->
                 </div>
 
                 % if mode != 'base':
@@ -64,7 +64,7 @@ course_mode_class = course_mode if course_mode else ''
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
                                 <div class="signatory">
-                                    <img class="signatory-signature" style="padding:0;margin-bottom:0;" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                    <img class="signatory-signature" style="padding:0;margin-bottom:0;min-height:6rem;max-height:6.3rem!important;" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}" >
 
                                     <h4 class="signatory-name hd-5">${signatory['name']}</h4>
 <!--                                    <p class="signatory-credentials copy copy-micro">
