@@ -44,9 +44,16 @@ if 'Physics' in str(course.id) and ('physics.uoc.gr' in str(student.email) or 'm
     enablecert=False
 endif
 
+NoCertData=True
+if certificate_data:
+    if certificate_data.cert_web_view_url:
+        NoCertData=True
+    else:
+        NoCertData=False
+endif
 
 %>
-<!-- ngick: ${enablecert}-->
+<!-- ngick: enablecert: ${enablecert} -->
 <main id="main" aria-label="Content" tabindex="-1">
     <div class="container">
         <div class="profile-wrapper">
@@ -71,13 +78,13 @@ endif
                     <div class="auto-cert-message" id="course-success">
                         <div class="has-actions">
                             <% post_url = reverse('generate_user_cert', args=[unicode(course.id)]) %>
+				%if enablecert and certificate_data.cert_web_view_url is None:
                             <div class="msg-content">
                                 <!--h4 class="hd hd-4 title">${certificate_data.title}</h4-->
-                                <h4 class="hd hd-4 title">Συγχαρητήρια, πληροίτε τις προϋποθέσεις για τη λήψη βεβαίωσης επιτυχούς παρακολούθησης!</h4>
                                 <!--p class="copy">${certificate_data.msg} </p ngick ${certificate_data}-->
-                               %if enablecert:
+                                <h4 class="hd hd-4 title">Συγχαρητήρια, πληροίτε τις προϋποθέσεις για τη λήψη βεβαίωσης επιτυχούς παρακολούθησης!</h4>
                                 <p class="copy">Το σύστημα πληρωμών για την έκδοση βεβαιώσεων έχει ενεργοποιηθεί.<br/>
-                                Το κόστος για την έκδοση βεβαίωσης είναι 15&euro; και οι τρόποι πληρωμής που προβλέπονται είναι μέσω:</p>
+                                <!--Το κόστος για την έκδοση βεβαίωσης είναι 15&euro; και--> Oι τρόποι πληρωμής που προβλέπονται είναι μέσω:</p>
                                <ol class="copy" style="text-align:left;margin-top:0px;">
                                  <li>χρεωστικής/πιστωτικής κάρτας</li>
                                  <li>Paypal</li>
@@ -85,10 +92,12 @@ endif
                                  <li>αντικαταβολής (με επιπλέον κόστος 3 ευρώ) και</li>
                                  <li>πληρωμής σε κατάστημα.</li>
                               </ol>
+				
 
-                            <p class="copy">Η βεβαίωση επιτυχούς παρακολούθησης εκδίδεται <b>ΔΩΡΕΑΝ</b> για ανέργους εγγεγραμμένους στον ΟΑΕΔ.<!--, μετά από πιστοποίηση της ανεργίας τους μέσω του συστήματος πληρωμών--></p>
-                               %endif
+		    <p class="copy">Η βεβαίωση επιτυχούς παρακολούθησης εκδίδεται <b>ΔΩΡΕΑΝ</b> για ανέργους εγγεγραμμένους στον ΟΑΕΔ.<!--, μετά από πιστοποίηση της ανεργίας τους μέσω του συστήματος πληρωμών--></p><br/>
+<h3 class="hd hd-4 title">Για να ενεργοποιηθεί η σελίδα της προόδου σας θα πρέπει να προχωρήσετε σε έκδοση βεβαίωσης. Η σελίδα θα ενεργοποιηθεί ταυτόχρονα με την ανάρτηση της βεβαίωσής σας.</h3>
                             </div>
+                               %endif
                             <div class="msg-actions">
                                 %if certificate_data.cert_web_view_url:
                                 <a class="btn" href="${certificate_data.cert_web_view_url}" target="_blank">${_("View Certificate")} <span class="sr">${_("Opens in a new browser window")}</span></a>
@@ -110,8 +119,9 @@ endif
                 </div>
                 %endif
 
-                %if not course.disable_progress_graph:
+                %if not course.disable_progress_graph and (not passed or NoCertData or not enablecert):  ##ngick
                 <div class="grade-detail-graph" id="grade-detail-graph"></div>
+	
                 %endif
 
                 % if credit_course_requirements:
@@ -175,7 +185,7 @@ endif
                 </section>
                 %endif
 
-                %if courseware_summary:
+                %if courseware_summary and (not passed or NoCertData or not enablecert) : ##ngick
                 <section class="chapters">
                     <h2 class="sr">${_('Details for each chapter')}</h2>
                     %for chapter in courseware_summary:
@@ -251,6 +261,8 @@ endif
         </div>
     </div>
 </main>
+
+
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
     DateUtilFactory.transform(iterationKey=".localized-datetime");
 </%static:require_module_async>
