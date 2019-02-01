@@ -10,14 +10,14 @@
 <!--ngick already moved to ngextra.css after updating assets remove it-->
 <style>
 /*remove the double title for every xblock*/
-.xblock .xblock h2{
+/*.xblock .xblock h2{
 display:none;
-}
+}*/
 
 /*The following are for about page*/
-  .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1{
+/*  .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1{
    font-size:x-large; 
-  }
+  }*/
 /*for hidding a link like physics, history in the about page course just after the course title*/
 .course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 button{
 display:none!important;
@@ -50,7 +50,7 @@ a.nglink:hover{
     box-sizing: border-box;
     padding:15px;
     margin-top:20px;
-  }
+  a}*/
 /*end of about page */
 
 .banner_c{
@@ -65,29 +65,18 @@ top:142px;
 display:block;
 width:100%;
 }
-/*For hiding help at top*/
-a.doc-link{
-display:none;
-}
-/*For overflowing the title */
-.header-global.slim .wrapper-header .course-header{
-text-overflow:ellipsis;
-white-space:nowrap;
-overflow:hidden;
-width:50%;
 
-}
 
-.dashboard .my-courses .course .details .course-info{
-width:50%!important;
-}
-.dashboard .my-courses .course .details .wrapper-course-actions{
-width:50%!important;
-}
+
+
+
+
+
+
 /*For hiding email notifications for forum*/
-.home-helpgrid tr.helpgrid-row.helpgrid-row-notification{
+/* .home-helpgrid tr.helpgrid-row.helpgrid-row-notification{
 display:none!important;
-}
+}*/
 /* until here must moved to css*/
 
 .nav-colophon {
@@ -157,7 +146,7 @@ text-align:center;
           <span><a href="${marketing_link('NEWS')}">ΝΕΑ</a></span>
           <span><a href="${marketing_link('FAQ')}">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</a></span>
           <span><a href="${reverse('honor')}">ΟΡΟΙ ΧΡΗΣΗΣ</a></span>
-          <span><a href="${marketing_link('GDPR')}">ΠΡΟΣΩΠΙΚΑ ΔΕΔΟΜΕΝΑ</a></span>
+          <span><a href="${reverse('privacy')}">ΠΡΟΣΩΠΙΚΑ ΔΕΔΟΜΕΝΑ</a></span>
           <span><a href="${marketing_link('CONTACT')}">ΕΠΙΚΟΙΝΩΝΙΑ</a></span>
           <span><a href="https://pay.mathesis.org/el/payments/donate/">ΔΩΡΕΕΣ</a></span>
         </ol>

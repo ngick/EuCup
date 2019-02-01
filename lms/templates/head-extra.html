@@ -1,11 +1,200 @@
 ## mako
-<!--<div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;">ΠΡΟΣΟΧΗ: Bρισκόμαστε σε αναβάθμιση και οι εργασίες σας δεν θα αποθηκεύονται. <span class="sLine">Σύντομα και πάλι κοντά σας.</span></div>-->
+	<div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;"><b>ΠΡΟΣΟΧΗ: Bρισκόμαστε σε αναβάθμιση και οι εργασίες σας δεν θα αποθηκεύονται. <span class="sLine">Σύντομα και πάλι κοντά σας.</b></span></div>
 <!--div style="background:black;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;">&nbsp; </div-->
 <%namespace name='static' file='/static_content.html'/>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,700,600,400&subset=latin,greek,greek-ext' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="${static.url('/static/EuCup/css/ng.css')}" />
+<!--link rel="stylesheet" type="text/css" href="${static.url('/static/EuCup/css/ng.css')}" /-->
+<style>
+/*global*/
+/*courses homepage GLOBAL STUFF*/
+html, body{
+background:#efefef!important;
+}
+/*to eliminate the space above footer*/
+.wrapper-footer{
+margin-top:0px!important;
+box-shadow:none!important;
+border-top:none!important;
+}
+.wrapper-footer, .home{
+background:#efefef!important
+}
+.global-header{
+background:#efefef!important;
+}
+.global-header .main-header{
+max-width:1300px;
+margin:auto;
+}
+.global-header .nav-links .secondary .dropdown-user-menu{
+z-index:15;
+}
+@media (max-width: 1900px) and (min-width: 1600px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:185px;
+}
+}
+@media (max-width: 2250px) and (min-width: 1900px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:350px;
+}
+}
+@media (max-width: 2600px) and (min-width: 2250px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:520px;
+}
+}
+@media (max-width: 2950px) and (min-width: 2600px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:700px;
+}
+}
+@media (min-width: 2950px){
+.global-header .nav-links .secondary .dropdown-user-menu{
+right:860px;
+}
+}
+.header-global{
+background:#efefef!important;
+}
+.find-courses, .university-profile{
+background:none;
+}
+.content-wrapper{
+max-width:1220px;
+margin-left:auto;
+margin-right:auto;
+padding-bottom:0px!important;
+background:#efefef!important;
+}
+/*.learn-more{
+left: calc(50%-105px)!important;
+width: 210px!important;
+}*/
+.highlighted-courses .courses{
+padding-top:0px!important;
+}
+.course-title a{color:grey}
+.courses-container .courses .course .course-info .course-title{
+color:grey!important;
+line-height:21px!important;
+font-size:17px!important;
+}
+.home>header {
+background:none!important;
+box-shadow:none!important;
+}
 
+.home>header .title{
+text-align:center;
+box-shadow:none!important;
+background:none!important; /*this is for the color just under slogan NO AVAILABLE VARIABLE*/
+}
+.home>header .title>.heading-group,
+.home>header .title>.heading-group h1{
+text-align:center;
+}
+.home>header .title>.heading-group p{
+font-family:"Open Sans";
+}
+/*find-courses*/
+.find-courses .courses{
+padding-top:70px!important;
+}
+.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span{
+font-weight:inherit!important;
+font-size:1.5em!important;
+}
+
+.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span, .find-courses .wrapper-search-context .search-status-label{
+line-height:1.2em;
+}
+/*DASHBOARD*/
+.dashboard .side-container{
+display:none;
+}
+/*fix color of the borders in dashboard*/
+.dashboard .my-courses .listing-courses .course-item, 
+.dashboard .my-courses .wrapper-header-courses{
+border-bottom-color:#cfcfcf!important;
+}
+.dashboard .my-courses .listing-courses .course-item .course-container{
+border:1px solid #cfcfcf!important;
+}
+h3 a, h3 a:visited{
+color:grey;
+}
+h3 a:hover, a:focus{
+color:#0079bc;
+}
+.course-actions a:hover{
+color:white;
+}
+.dashboard .my-courses .course .details .course-actions .action:hover, .dashboard .my-courses .course .details .course-actions .action:focus{
+color:black!important;
+}
+/*hide helo*/
+a.help-link{display:none;}
+.window-wrap{background:none!important;}
+.login-register-content{background:none!important;}
+.login-register, .financial-assistance-wrapper .financial-assistance-form{background:none!important;}
+
+/*For overflowing the title */
+.global-header .header-logo .course-header{
+text-overflow:ellipsis;
+white-space:nowrap;
+overflow:hidden;
+line-height:1.2em;
+width:30%;
+}
+.global-header .header-logo .course-header .provider{
+display:none;
+}
+.global-header .header-logo .course-header .course-number{
+display:block;
+}
+.global-header .header-logo .course-header .course-name{
+display:inline-block;
+}
+/*remove the double title for every xblock*/
+.xblock .xblock h2{
+display:none;
+}
+
+/* account settings*/
+.wrapper-account-settings .wrapper-header .account-nav{
+display:none;
+}
+div.account-deletion-details{
+/*display:none;*/
+}
+/*the following are added features*/
+img.rs{
+float: left; 
+margin-right: 10px;
+width: 200px;
+height: auto;
+}
+.ngm{
+   font-family:times;
+    font-size:1.15em;
+}
+.ngj{
+text-align:justify;
+}
+.sLine{
+overflow: hidden;
+white-space: nowrap;
+}
+div.shortdesc{
+margin-bottom:3px;
+font-weight:bold;
+}
+span.shortdesc{
+font-style:italic;
+}
+</style>
 <script type="text/javascript" src="${static.url('/static/EuCup/css/highslide/highslide-with-html.js')}"></script>
 <link rel="stylesheet" type="text/css" href="${static.url('/static/EuCup/css/highslide/highslide.css')}" />
 <script type="text/javascript">

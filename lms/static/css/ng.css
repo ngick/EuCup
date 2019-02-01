@@ -1,56 +1,5 @@
 /*the following are mods */
 
-/*courses homepage GLOBAL STUFF*/
-html, body{
-background:#efefef!important;
-}
-.wrapper-footer, .home{
-background:#efefef!important
-}
-.header-global{
-background:#efefef!important;
-}
-.learn-more{
-left: calc(50%-105px)!important;
-width: 210px!important;
-}
-.highlighted-courses .courses{
-padding-top:0px!important;
-}
-.content-wrapper{
-padding-bottom:0px!important;
-background:#efefef!important;
-}
-
-.courses-container .courses .course .course-info .course-title{
-color:grey!important;
-line-height:21px!important;
-font-size:17px!important;
-}
-.home>header .title>.heading-group,
-.home>header .title>.heading-group h1{
-text-align:center;
-}
-.home>header .title>.heading-group p{
-font-family:"Open Sans";
-}
-/*find-courses*/
-.find-courses .courses{
-padding-top:70px!important;
-}
-.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span{
-font-weight:inherit!important;
-font-size:1.5em!important;
-}
-
-.dashboard .my-courses .course .details .course-title a, .dashboard .my-courses .course .details .course-title span, .find-courses .wrapper-search-context .search-status-label{
-line-height:1.2em;
-}
-
-/*The following is for episkophsh*/
-.course-info .container nav a, .course-info section.outside-app nav a, .course-info .wrapper-account-settings nav a, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy nav a, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy nav a, .course-info .view-profile .wrapper-profile-sections nav a, .view-profile .course-info .wrapper-profile-sections nav a{
-text-transform:none!important;
-}
 /*the followin is for hiding the welcome in News and Updates of the course (anakoinwseis)*/
 div.container>div.home{
 display:none!important;
@@ -70,21 +19,6 @@ text-transform:none!important;
 text-transform:none!important;
 }
 
-/*password reset form */
-.view-register .introduction header .title .title-super, .view-login .introduction header .title .title-super, .view-passwordreset .introduction header .title .title-super{
-text-transform:none!important;
-font-weight:400;
-
-}
-.view-passwordreset .introduction header{
-background:none!important;
-height:100px!important;
-}
-.view-passwordreset .passwordreset form .instructions{
-font-weight:400;
-
-}
-/*end of password reset form*/
 
 /*ACCOUNT SETTINGS */
 /* hide top paragraph */
@@ -135,19 +69,6 @@ color: red;
 }
 
 
-/* the following are for the logo in header*/
-/*header.global h1.logo{
-float:none;!important;
-position:initial!important;
-text-align:center!important;
-margin-left:auto!important;
-margin-right:auto!important;
-
-}
-
-header.global h1.logo a{
-display:initial!important;
-}*/
 /*the following are for the slogan header*/
 .home>header{
 background:none!important;
@@ -158,12 +79,6 @@ text-align:center;
 }
 .home>header .title>hgroup h1{
   text-align:center;
-}
-
-.home>header .title{
-text-align:center;
-box-shadow:none!important;
-background:none!important; /*this is for the color just under slogan NO AVAILABLE VARIABLE*/
 }
 
 /*the following are for the blue bar under each course in homepage and the bg color*/
@@ -209,53 +124,16 @@ height:auto!important;
 display:none!important;
 }
 
-/*give more space in course listings and center them*/
-.dashboard .my-courses{
-width:80%!important;
-margin-left:auto!important;
-margin-right:auto!important;
-float:none;
-}
-/*fix color of the borders in dashboard*/
-.dashboard .my-courses .listing-courses .course-item, 
-.dashboard .my-courses .wrapper-header-courses{
-border-bottom-color:#cfcfcf!important;
-}
-.dashboard .my-courses .listing-courses .course-item .course-container{
-border:1px solid #cfcfcf!important;
-}
-h3 a, h3 a:visited{
-color:grey;
-}
-h3 a:hover, a:focus{
-color:#0079bc;
-}
-.course-actions a:hover{
-color:white;
-}
-.dashboard .my-courses .course .details .course-actions .action:hover, .dashboard .my-courses .course .details .course-actions .action:focus{
-color:black!important;
-}
 
 /* Hide info for the grade and certificate in dashboard */
 .course-item .course-container .course .wrapper-messages-primary{
 /*display:none!important;*/
 }
 
-/*for hidding a link like physics, history in the about page course just after the course title*/
-.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1 a{
-display:none!important;
-}
 h2, section.outside-app h1 {
 font-family: "Open Sans"!important;
 }
 
-/*to eliminate the space above footer*/
-.wrapper-footer{
-margin-top:0px!important;
-box-shadow:none!important;
-border-top:none!important;
-}
 
 /*the following are for tiding up the poll and survey*/
 li.poll-answer{
@@ -272,37 +150,8 @@ width:85%!important;
 
 
 
-/*the following are added features*/
-img.rs{
-float: left; 
-margin-right: 10px;
-width: 200px;
-height: auto;
-}
-.ngm{
-   font-family:times;
-    font-size:1.15em;
-}
-.ngj{
-text-align:justify;
-}
-.sLine{
-overflow: hidden;
-white-space: nowrap;
-}
-div.shortdesc{
-margin-bottom:3px;
-font-weight:bold;
-}
-span.shortdesc{
-font-style:italic;
-}
 
 /*New for relase ginkgo*/
-/*remove the double title for every xblock*/
-.xblock .xblock h2{
-display:none;
-}
 
 /*The following are for about page*/
   .course-info header.course-profile .intro-inner-wrapper .intro > .heading-group h1{
