@@ -1,5 +1,5 @@
 ## mako
-	<div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;"><b>ΠΡΟΣΟΧΗ: Bρισκόμαστε σε αναβάθμιση και οι εργασίες σας δεν θα αποθηκεύονται. <span class="sLine">Σύντομα και πάλι κοντά σας.</b></span></div>
+	<!--div style="background:red;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;"><b>ΠΡΟΣΟΧΗ: Bρισκόμαστε σε αναβάθμιση και οι εργασίες σας δεν θα αποθηκεύονται. <span class="sLine">Σύντομα και πάλι κοντά σας.</b></span></div-->
 <!--div style="background:black;text-align:center;padding-top:10px;padding-bottom:10px;line-height:25px;font-size:1.2em;">&nbsp; </div-->
 <%namespace name='static' file='/static_content.html'/>
 
@@ -53,6 +53,20 @@ right:700px;
 @media (min-width: 2950px){
 .global-header .nav-links .secondary .dropdown-user-menu{
 right:860px;
+}
+}
+@media (max-width: 700px){
+.course-info header.course-profile .intro-inner-wrapper .intro>.heading-group h1{
+font-size:large!important;
+line-height:1.2;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta a{
+font-size:small!important;
+line-height:1.3!important;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+font-size:small!important;
+line-height:1.3!important;
 }
 }
 .header-global{
@@ -162,6 +176,10 @@ display:inline-block;
 display:none;
 }
 
+.forum-nav-thread-wrapper-1{
+max-width:calc(100% - 96px);
+
+}
 /* account settings*/
 .wrapper-account-settings .wrapper-header .account-nav{
 display:none;
