@@ -59,7 +59,6 @@ if certificate_data:
         NoCertData=True
     else:
         NoCertData=False
-    if certificate_data.cert_status == "audit_passing" or certificate_data.cert_status == "honor_passing": enablecert=False
 endif
 
 %>
@@ -77,10 +76,10 @@ endif
                 </div>
                 % endif
                 <h2 class="hd hd-2 progress-certificates-title">
-                    ${_("Course Progress for Student '{username}' ({email})").format(username=student.profile.name, email=student.email)}
+                    ${_("Course Progress for Student '{username}' ({email})").format(username=username, email=student.email)}
                 </h2>
 
-                        %if certificate_data and enablecert: 
+                        %if certificate_data: 
                 <div class="wrapper-msg wrapper-auto-cert">
                     <div id="errors-info" class="errors-info"></div>
                     <!--%block name="certificate_block"-->
@@ -88,7 +87,7 @@ endif
                             <div class="has-actions"> 
                                 <% post_url = reverse('generate_user_cert', args=[unicode(course.id)]) %>
                                 %if enablecert and certificate_data.cert_web_view_url is None:
-                                <div class="msg-content">
+                                <div class="msg-content">${certificate_data}
                                     <!--h4 class="hd hd-4 title">${certificate_data.title}</h4>
                                     <p class="copy"> ${certificate_data.msg}<br>${certificate_data} ngick passed: ${certificate_data.cert_web_view_url} </p-->
 
@@ -106,7 +105,8 @@ endif
 
                     <p class="copy">Η βεβαίωση επιτυχούς παρακολούθησης εκδίδεται <b>ΔΩΡΕΑΝ</b> για ανέργους εγγεγραμμένους στον ΟΑΕΔ.<!--, μετά από πιστοποίηση της ανεργία
 ς τους μέσω του συστήματος πληρωμών--></p><br/>
-<h3 class="hd hd-4 title">Για να ενεργοποιηθεί η σελίδα της προόδου σας θα πρέπει να προχωρήσετε σε έκδοση βεβαίωσης. Η σελίδα θα ενεργοποιηθεί ταυτόχρονα με την ανάρτηση της βεβαίωσής σας.</h3>
+<h3 class="hd hd-4 title">Για να ενεργοποιηθεί η σελίδα της προόδου σας θα πρέπει να προχωρήσετε σε έκδοση βεβαίωσης. Η σελίδα θα ενεργοποιηθεί ταυτόχρονα με την ανάρτηση τ
+ης βεβαίωσής σας.</h3>
 
 
                                 </div>
@@ -116,7 +116,7 @@ endif
                                     <a class="btn" href="${certificate_data.cert_web_view_url}" target="_blank">${_("View Certificate")} <span class="sr">${_("Opens in a new browser window")}</span></a>
                                     %elif certificate_data.cert_status == CertificateStatuses.downloadable and certificate_data.download_url:
                                     <a class="btn" href="${certificate_data.download_url}" target="_blank">${_("Download Your Certificate")} <span class="sr">${_("Opens in a new browser window")}</span></a>
-                                    %elif certificate_data.cert_status == CertificateStatuses.requesting and enablecert:
+                                    %elif certificate_data.cert_status == CertificateStatuses.requesting:
                                 <form action="https://pay.mathesis.org/el/payments/pay/" method="POST" >
                                   <input type="hidden" name="uname" value="${student.username}">
                                   <input type="hidden" name="email" value="${student.email}">
