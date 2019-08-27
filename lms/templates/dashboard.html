@@ -1,4 +1,6 @@
-<%page expression_filter="h"/>
+<%
+###<%page expression_filter="h"/>
+%>
 <%inherit file="main.html" />
 <%def name="online_help_token()"><% return "learnerdashboard" %></%def>
 <%namespace name='static' file='static_content.html'/>
@@ -193,6 +195,98 @@ r/><br/>
     <div class="dashboard" id="dashboard-main">
       <div class="main-container">
         <div class="my-courses" id="my-courses">
+
+
+
+
+<!-- MORAL COURSES LIST SCRIPT START -->
+
+<div id="cours" style="width: 100%; clear: both;"> </div>
+
+<%
+stid = user.id
+import requests, json, html
+from html import parser
+
+mecarestauth = None
+with open('/home/dagg/REST/mecarestauth.json') as json_file:
+  mecarestauth = json.load(json_file)
+
+url = 'https://pay.mathesis.org/el/mecarest/grades/u_unpaid_courses/?uid={}&format=json'.format(stid)
+restresp = requests.get(url, auth=(mecarestauth['username'], mecarestauth['password']))
+restresp = json.dumps(restresp.json())
+%>
+
+
+<style>
+.courselist {
+  clear: both;
+  background-color: aliceblue;
+  /*list-style-type: circle;*/
+  list-style-type: none;
+  list-style-position: inside;
+  border: 1px grey solid;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 10px 10px -40px;
+}
+
+.courseimg {
+  padding: 1px;
+  border-radius: 5px;
+  border: 1px light-grey solid;
+}
+
+.ctitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+</style>
+
+
+<script>
+var rs = '${restresp}';
+var courses = JSON.parse(rs);
+
+var div = document.getElementById('cours');
+
+var courseslist = '';
+var cres = '';
+
+console.log(courses.results.length)
+if (courses.count > 0){
+
+    for (i=0; i < courses.results.length; i++){
+
+        form = `<div style="float: right; position: relative; "><form action="https://pay.mathesis.org/el/payments/pay/" method="POST">
+                    <input type="hidden" name="uname" value="${user.username}">
+                    <input type="hidden" name="email" value="${user.email}">
+                    <input type="hidden" name="uid" value="${user.id}">
+                    <input type="hidden" name="cid" value="`+ courses.results[i].id  +`">
+                    <input type="hidden" name="payhash" value="`+ courses.payhash +`">
+                    <input type="submit" value="Έκδοση Βεβαίωσης" style="margin-top:10px; " class="button button1" >
+                </form></div>`;
+
+        cres += '<li class="courselist"> <div class="ctitle"> ' + '<a href="' + courses.results[i].course_url  + '" target="_blank"> <img src="' +courses.results[i].image_url+ '" width="100px" class="courseimg"> ' + courses.results[i].name + '</a> ' + form +' </div></li>';
+
+    }
+
+    courseslist += '<div><header class="wrapper-header-courses"><h2 class="header-courses">Μαθήματα με ηθική δέσμευση που εκκρεμεί η έκδοση βεβαίωσης:</h2></header></div><ul>' + cres + '</ul>';
+
+    div.innerHTML += courseslist;
+} else {
+    div.innerHTML += '';
+}
+</script>
+
+<!-- MORAL COURSES LIST SCRIPT END -->
+
+
+
+
+
+
           % if display_dashboard_courses:
           <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>
           % endif
